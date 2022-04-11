@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            outline: 0;
+        }
+
+        a{
+            margin:0;
+            padding:0;
+        }
+        body{
+            height: 2000px;
+        }
+
+        .bar{
+            width:100%;
+            position: fixed;
+            bottom: 0;
+            left:0;
+            transition: 0.4s all;
+        }
+         
+
+        .hide{
+            transform: translateY(80px);
+            transition: 0.4s all;
+        }
+
+        .container{
+            width:1170px;
+            margin:0 auto;
+        }
+
+        .nav_bar{
+            width:100%;
+            background: #c0bebec7;
+            padding:30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav_bar a{
+            font-size: 20px;
+            color:#444;
+            text-decoration: none;
+            padding-right: 20px;
+            text-transform: capitalize;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .
+    </style>
+</head>
+<body>
+    
+    <div class="navbar">
+        <div class="bar">
+             <div class="container">
+                 <div class="nav_bar">
+                     <a href="#">Home</a>
+                     <a href="#">service</a>
+                     <a href="#">about</a>
+                     <a href="#">blog</a>
+                     <a href="#">contact</a>
+                 </div>
+             </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script>
+var bar = document.querySelector('.bar');
+
+
+
+window.addEventListener('wheel',function(event){
+    if(event.deltaY > 0){
+        bar.classList.add('hide');
+    }
+    else if(event.deltaY < 0){
+        bar.classList.remove('hide');
+    }
+})
+
+    </script>
+</body>
+</html>
